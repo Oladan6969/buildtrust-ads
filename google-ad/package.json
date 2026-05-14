@@ -3,9 +3,9 @@
   "version": "1.0.0",
   "description": "Google — 60s Cinematic Motion Graphics Ad | BuildTrust Tech",
   "scripts": {
-    "start": "npx remotion studio",
-    "render": "npx remotion render GoogleAd out/google-ad.mp4 --codec h264",
-    "render:hd": "npx remotion render GoogleAd out/google-ad-4k.mp4 --codec h264 --scale 2"
+    "start": "remotion studio src/index.ts",
+    "render": "remotion render src/index.ts GoogleAd out/google-ad.mp4 --codec h264",
+    "render:hd": "remotion render src/index.ts GoogleAd out/google-ad-4k.mp4 --codec h264 --scale 2"
   },
   "dependencies": {
     "@remotion/cli": "^4.0.0",

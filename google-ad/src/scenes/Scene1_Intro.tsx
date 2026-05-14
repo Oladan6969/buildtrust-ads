@@ -45,28 +45,28 @@ export const Scene1_Intro: React.FC = () => {
     extrapolateRight: "clamp",
   });
 
-  // Logo reveal
+  // Logo reveal — snappy
   const logoProgress = spring({
-    frame: frame - 20,
+    frame: frame - 10,
     fps,
-    config: { damping: 200, stiffness: 30, mass: 1 },
+    config: { damping: 18, stiffness: 200 },
   });
 
-  // Tagline
-  const taglineOpacity = interpolate(frame, [80, 110], [0, 1], {
+  // Tagline — enters at 1.7s instead of 2.7s
+  const taglineOpacity = interpolate(frame, [48, 65], [0, 1], {
     extrapolateLeft: "clamp",
     extrapolateRight: "clamp",
   });
-  const taglineY = interpolate(frame, [80, 110], [20, 0], {
+  const taglineY = interpolate(frame, [48, 65], [20, 0], {
     extrapolateLeft: "clamp",
     extrapolateRight: "clamp",
     easing: Easing.out(Easing.cubic),
   });
 
-  // Radial pulse rings
-  const ring1 = interpolate(frame, [10, 80], [0, 1], { extrapolateRight: "clamp", easing: Easing.out(Easing.cubic) });
-  const ring2 = interpolate(frame, [25, 95], [0, 1], { extrapolateRight: "clamp", easing: Easing.out(Easing.cubic) });
-  const ring3 = interpolate(frame, [40, 110], [0, 1], { extrapolateRight: "clamp", easing: Easing.out(Easing.cubic) });
+  // Radial pulse rings — faster expansion
+  const ring1 = interpolate(frame, [5, 45], [0, 1], { extrapolateRight: "clamp", easing: Easing.out(Easing.cubic) });
+  const ring2 = interpolate(frame, [15, 55], [0, 1], { extrapolateRight: "clamp", easing: Easing.out(Easing.cubic) });
+  const ring3 = interpolate(frame, [25, 65], [0, 1], { extrapolateRight: "clamp", easing: Easing.out(Easing.cubic) });
 
   return (
     <AbsoluteFill
@@ -112,7 +112,7 @@ export const Scene1_Intro: React.FC = () => {
           }}
         >
           {LETTERS.map((l, i) => {
-            const letterProgress = interpolate(frame, [20 + i * 6, 50 + i * 6], [0, 1], {
+            const letterProgress = interpolate(frame, [8 + i * 4, 22 + i * 4], [0, 1], {
               extrapolateLeft: "clamp",
               extrapolateRight: "clamp",
               easing: Easing.out(Easing.cubic),
@@ -159,7 +159,7 @@ export const Scene1_Intro: React.FC = () => {
 
       {/* Color streaks */}
       {GOOGLE_COLORS.map((color, i) => {
-        const streakProgress = interpolate(frame, [8 + i * 5, 50 + i * 5], [0, 1], {
+        const streakProgress = interpolate(frame, [3 + i * 3, 18 + i * 3], [0, 1], {
           extrapolateLeft: "clamp",
           extrapolateRight: "clamp",
           easing: Easing.out(Easing.cubic),

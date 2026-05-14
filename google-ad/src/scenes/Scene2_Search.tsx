@@ -24,26 +24,26 @@ export const Scene2_Search: React.FC = () => {
     extrapolateRight: "clamp",
   });
 
-  // Search bar entrance
-  const barSpring = spring({ frame: frame - 10, fps, config: { damping: 120, stiffness: 25 } });
+  // Search bar entrance — snappy
+  const barSpring = spring({ frame: frame - 5, fps, config: { damping: 18, stiffness: 200 } });
 
-  // Typing animation
+  // Typing animation — faster
   const charsVisible = Math.floor(
-    interpolate(frame, [30, 90], [0, QUERY.length], {
+    interpolate(frame, [15, 55], [0, QUERY.length], {
       extrapolateLeft: "clamp",
       extrapolateRight: "clamp",
       easing: Easing.out(Easing.cubic),
     })
   );
 
-  // Results cascade
-  const result1 = spring({ frame: frame - 100, fps, config: { damping: 100, stiffness: 20 } });
-  const result2 = spring({ frame: frame - 120, fps, config: { damping: 100, stiffness: 20 } });
-  const result3 = spring({ frame: frame - 140, fps, config: { damping: 100, stiffness: 20 } });
+  // Results cascade — snappy, tighter delays
+  const result1 = spring({ frame: frame - 65, fps, config: { damping: 18, stiffness: 180 } });
+  const result2 = spring({ frame: frame - 78, fps, config: { damping: 18, stiffness: 180 } });
+  const result3 = spring({ frame: frame - 91, fps, config: { damping: 18, stiffness: 180 } });
   const resultSprings = [result1, result2, result3];
 
-  // Featured card
-  const featuredScale = spring({ frame: frame - 95, fps, config: { damping: 80, stiffness: 18 } });
+  // Featured card — snappy
+  const featuredScale = spring({ frame: frame - 60, fps, config: { damping: 18, stiffness: 180 } });
 
   // Cursor blink
   const cursorVisible = Math.floor(frame / 15) % 2 === 0;

@@ -1,0 +1,81 @@
+GOOGLE AD — VOICEOVER SCRIPT
+30fps · 45 seconds total
+Generated: 2026-05-14
+================================================================================
+
+TIMING GUIDE
+Scene 1:  0s – 4s    (frames 0–120)
+Scene 2:  4s – 12s   (frames 120–360)
+Scene 3:  12s – 21s  (frames 360–630)
+Scene 4:  21s – 29s  (frames 630–870)
+Scene 5:  29s – 38s  (frames 870–1140)
+Scene 6:  38s – 45s  (frames 1140–1350)
+
+================================================================================
+SCENE 1 — Logo Reveal (4 seconds) → save as vo1.mp3
+================================================================================
+"Google. The world, organized."
+
+  Target length: ~2.5 seconds (start speaking at 0.5s mark)
+  Tone: Calm, confident, iconic — minimal reverb
+
+================================================================================
+SCENE 2 — Search Experience (8 seconds) → save as vo2.mp3
+================================================================================
+"Search anything. Get instant answers — powered by AI."
+
+  Target length: ~4 seconds (start at 0.5s mark)
+  Tone: Clear, fast, informative
+
+================================================================================
+SCENE 3 — Gemini AI (9 seconds) → save as vo3.mp3
+================================================================================
+"Meet Gemini. Google's most capable AI — it understands context,
+generates ideas, writes code, and reasons beyond limits."
+
+  Target length: ~6 seconds (start at 0.5s mark)
+  Tone: Awe-inspiring, slightly breathy, cinematic
+
+================================================================================
+SCENE 4 — Ecosystem (8 seconds) → save as vo4.mp3
+================================================================================
+"One ecosystem. Search, Maps, YouTube, Gmail — everything connected,
+working together for you."
+
+  Target length: ~5 seconds (start at 0.5s mark)
+  Tone: Warm, expansive
+
+================================================================================
+SCENE 5 — Power Statements (9 seconds) → save as vo5.mp3
+================================================================================
+"Search everything. Discover anything. Create the future."
+
+  Target length: ~5 seconds — PACE EACH PHRASE TO HIT THE TEXT CUTS:
+    "Search everything."  → 0.0s – 1.8s of this clip
+    "Discover anything."  → 2.0s – 3.8s
+    "Create the future."  → 4.2s – 6.0s
+  Tone: Bold, punchy, rising energy
+
+================================================================================
+SCENE 6 — CTA (7 seconds) → save as vo6.mp3
+================================================================================
+"Try Google Gemini. The future starts at gemini.google.com."
+
+  Target length: ~4.5 seconds (start at 0.5s mark)
+  Tone: Warm close, inviting — slight smile in the voice
+
+================================================================================
+ELEVENLABS SETTINGS (recommended)
+================================================================================
+  Voice:     Rachel or Aria (clear, professional, slight warmth)
+  Model:     Eleven Multilingual v2 or Eleven Turbo v2.5
+  Stability: 0.55
+  Clarity:   0.75
+  Style:     0.20
+
+After generating, place all 6 files in:
+  google-ad/public/audio/
+  named: vo1.mp3, vo2.mp3, vo3.mp3, vo4.mp3, vo5.mp3, vo6.mp3
+
+Then uncomment the <Audio> VO tags in src/compositions/GoogleAd.tsx
+================================================================================

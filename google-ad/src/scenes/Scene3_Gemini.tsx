@@ -24,24 +24,24 @@ export const Scene3_Gemini: React.FC = () => {
     extrapolateRight: "clamp",
   });
 
-  // Gemini logo build
-  const logoSpring = spring({ frame: frame - 15, fps, config: { damping: 80, stiffness: 18 } });
+  // Gemini logo build — snappy
+  const logoSpring = spring({ frame: frame - 8, fps, config: { damping: 18, stiffness: 200 } });
 
   // Gradient wave animation
   const waveOffset = frame * 2;
 
-  // Neural network nodes
-  const nodeReveal = interpolate(frame, [30, 120], [0, 1], {
+  // Neural network nodes — faster reveal
+  const nodeReveal = interpolate(frame, [10, 50], [0, 1], {
     extrapolateLeft: "clamp",
     extrapolateRight: "clamp",
     easing: Easing.out(Easing.cubic),
   });
 
-  // Capabilities
-  const cap1 = spring({ frame: frame - 80, fps, config: { damping: 80, stiffness: 15 } });
-  const cap2 = spring({ frame: frame - 110, fps, config: { damping: 80, stiffness: 15 } });
-  const cap3 = spring({ frame: frame - 140, fps, config: { damping: 80, stiffness: 15 } });
-  const cap4 = spring({ frame: frame - 170, fps, config: { damping: 80, stiffness: 15 } });
+  // Capabilities — tighter stagger
+  const cap1 = spring({ frame: frame - 50, fps, config: { damping: 18, stiffness: 180 } });
+  const cap2 = spring({ frame: frame - 65, fps, config: { damping: 18, stiffness: 180 } });
+  const cap3 = spring({ frame: frame - 80, fps, config: { damping: 18, stiffness: 180 } });
+  const cap4 = spring({ frame: frame - 95, fps, config: { damping: 18, stiffness: 180 } });
   const caps = [cap1, cap2, cap3, cap4];
 
   // Pulse
@@ -162,7 +162,7 @@ export const Scene3_Gemini: React.FC = () => {
 
         {/* Divider */}
         <div style={{
-          width: interpolate(frame, [60, 110], [0, 400], { extrapolateLeft: "clamp", extrapolateRight: "clamp" }),
+          width: interpolate(frame, [30, 55], [0, 400], { extrapolateLeft: "clamp", extrapolateRight: "clamp" }),
           height: 1,
           background: "linear-gradient(90deg, transparent, rgba(255,255,255,0.3), transparent)",
           marginBottom: 40,

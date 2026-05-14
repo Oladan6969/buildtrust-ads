@@ -19,10 +19,10 @@ export const Scene6_CTA: React.FC = () => {
     extrapolateRight: "clamp",
   });
 
-  const logoSpring = spring({ frame: frame - 20, fps, config: { damping: 80, stiffness: 18 } });
-  const taglineSpring = spring({ frame: frame - 60, fps, config: { damping: 80, stiffness: 15 } });
-  const ctaSpring = spring({ frame: frame - 90, fps, config: { damping: 80, stiffness: 15 } });
-  const urlSpring = spring({ frame: frame - 110, fps, config: { damping: 80, stiffness: 15 } });
+  const logoSpring = spring({ frame: frame - 8, fps, config: { damping: 18, stiffness: 200 } });
+  const taglineSpring = spring({ frame: frame - 30, fps, config: { damping: 18, stiffness: 180 } });
+  const ctaSpring = spring({ frame: frame - 50, fps, config: { damping: 18, stiffness: 180 } });
+  const urlSpring = spring({ frame: frame - 65, fps, config: { damping: 18, stiffness: 180 } });
 
   const pulse = Math.sin(frame * 0.07) * 0.5 + 0.5;
 
@@ -90,7 +90,7 @@ export const Scene6_CTA: React.FC = () => {
 
       {/* Divider line */}
       <div style={{
-        width: interpolate(frame, [50, 90], [0, 320], { extrapolateLeft: "clamp", extrapolateRight: "clamp" }),
+        width: interpolate(frame, [20, 45], [0, 320], { extrapolateLeft: "clamp", extrapolateRight: "clamp" }),
         height: 1,
         background: "linear-gradient(90deg, transparent, rgba(255,255,255,0.25), transparent)",
         marginBottom: 32,

@@ -30,10 +30,10 @@ export const Scene4_Ecosystem: React.FC = () => {
   const orbitSpeed = 0.008;
   const orbitAngle = frame * orbitSpeed;
 
-  const centerSpring = spring({ frame: frame - 10, fps, config: { damping: 60, stiffness: 15 } });
+  const centerSpring = spring({ frame: frame - 5, fps, config: { damping: 18, stiffness: 200 } });
   const pulse = Math.sin(frame * 0.06) * 0.5 + 0.5;
 
-  const titleOpacity = interpolate(frame, [20, 50], [0, 1], {
+  const titleOpacity = interpolate(frame, [5, 20], [0, 1], {
     extrapolateLeft: "clamp",
     extrapolateRight: "clamp",
   });
@@ -130,7 +130,7 @@ export const Scene4_Ecosystem: React.FC = () => {
 
         {/* Orbiting app icons */}
         {APPS.map((app, i) => {
-          const appSpring = spring({ frame: frame - (20 + i * 15), fps, config: { damping: 80, stiffness: 15 } });
+          const appSpring = spring({ frame: frame - (8 + i * 8), fps, config: { damping: 18, stiffness: 180 } });
           const angle = ((app.angle * Math.PI) / 180) + orbitAngle;
           const x = Math.cos(angle) * orbitRadius;
           const y = Math.sin(angle) * orbitRadius;

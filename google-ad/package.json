@@ -1,0 +1,25 @@
+{
+  "name": "google-ad",
+  "version": "1.0.0",
+  "description": "Google — 60s Cinematic Motion Graphics Ad | BuildTrust Tech",
+  "scripts": {
+    "start": "npx remotion studio",
+    "render": "npx remotion render GoogleAd out/google-ad.mp4 --codec h264",
+    "render:hd": "npx remotion render GoogleAd out/google-ad-4k.mp4 --codec h264 --scale 2"
+  },
+  "dependencies": {
+    "@remotion/cli": "^4.0.0",
+    "@remotion/three": "^4.0.0",
+    "remotion": "^4.0.0",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "three": "^0.163.0",
+    "gsap": "^3.12.5"
+  },
+  "devDependencies": {
+    "@types/react": "18.2.0",
+    "@types/react-dom": "18.2.0",
+    "@types/three": "^0.163.0",
+    "typescript": "^5.0.0"
+  }
+}
